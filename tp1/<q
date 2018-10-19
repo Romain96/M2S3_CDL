@@ -1,0 +1,13 @@
+// pour INT_MIN
+#include <limit.h>
+
+// valeur absolue
+/*@
+ ensures \result >= 0;
+ ensures \result == a || \result == -a;
+ requires a != INT_MIN
+ */
+int abs(int a)
+{
+	return (a > 0) ? a : -a;
+}
